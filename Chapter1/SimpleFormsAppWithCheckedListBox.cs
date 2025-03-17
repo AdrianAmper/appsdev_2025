@@ -17,10 +17,8 @@ namespace AdrianAmper
         {
             foreach (var movie in moviesCheckListBox.Items)
             {
-                // Check if the movie is checked
                 bool isSelected = moviesCheckListBox.GetItemChecked(moviesCheckListBox.Items.IndexOf(movie));
 
-                // Add the movie if it's checked and not already in the ListBox
                 if (isSelected && !moviesListBox.Items.Contains(movie))
                 {
                     moviesListBox.Items.Add(movie);
@@ -40,7 +38,7 @@ namespace AdrianAmper
 
         private void removeBtn_Click(object sender, EventArgs e)
         {
-            if (moviesListBox.SelectedItem != null)  // Ensure an item is selected
+            if (moviesListBox.SelectedItem != null)  
             {
                 moviesListBox.Items.Remove(moviesListBox.SelectedItem);
             }
